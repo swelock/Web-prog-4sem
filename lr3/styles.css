@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+header {
+    background-color: #2c3e50;
+    color: #ffffff;
+    padding: 15px 30px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+header .logo {
+    height: 60px;
+    width: auto;
+    border-radius: 5px;
+}
+
+header .info h1 {
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+}
+
+header .info p {
+    font-size: 0.9rem;
+    opacity: 0.9;
+}
+
+main {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px;
+    padding-bottom: 80px; /* Для подвала */
+}
+
+/* Окно вывода результата */
+.result {
+    width: 300px;
+    min-height: 60px;
+    background-color: #fff;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    word-break: break-all;
+    padding: 10px;
+    box-shadow: inset 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Виртуальная клавиатура */
+.keyboard {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    width: 300px;
+}
+
+.keyboard a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #e0e0e0;
+    color: #333;
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 20px 0;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    transition: background-color 0.2s;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.keyboard a:hover {
+    background-color: #d0d0d0;
+}
+
+.keyboard a:active {
+    box-shadow: none;
+    transform: translateY(2px);
+}
+
+/* Кнопка сброса (занимает все 3 колонки) */
+.keyboard a.reset {
+    grid-column: span 3;
+    background-color: #e74c3c;
+    color: white;
+    border-color: #c0392b;
+}
+
+.keyboard a.reset:hover {
+    background-color: #c0392b;
+}
+
+footer {
+    background-color: #2c3e50;
+    color: #ffffff;
+    text-align: center;
+    padding: 15px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
