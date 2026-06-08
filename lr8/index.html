@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ильин Кирилл Александрович | 241-353 | ЛР № А-8</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header>
+    <div class="header-inner">
+        <div class="logo-box">А-8</div>
+        <div>
+            <h1>Лабораторная работа № А-8</h1>
+            <p>Ильин Кирилл Александрович | Группа 241-353</p>
+            <p>Основы работы со строковыми данными в PHP. Кодировка. Анализ текста.</p>
+        </div>
+    </div>
+</header>
+
+<main>
+    <section class="card intro-card">
+        <h2>Анализ текста</h2>
+        <p>
+            Введите русский или английский текст в поле ниже. После нажатия кнопки программа
+            откроет файл <strong>result.php</strong> и выполнит анализ введённого текста.
+        </p>
+
+        <form action="result.php" method="post" class="analysis-form">
+            <label for="data">Текст для анализа:</label>
+            <textarea id="data" name="data" rows="12" placeholder="Например: Привет, мир! Hello, World! 123"></textarea>
+            <button type="submit">Анализировать</button>
+        </form>
+    </section>
+</main>
+
+<footer>
+    <p>Ильин К.А. ст.уч.гр. 241-353 | ЛР № А-8 | UTF-8</p>
+</footer>
+</body>
+</html>

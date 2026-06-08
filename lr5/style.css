@@ -1,0 +1,271 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #eef1f5;
+    color: #1f2933;
+    padding-bottom: 74px;
+}
+
+header {
+    background: #243447;
+    color: #ffffff;
+    padding: 18px 32px 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.18);
+}
+
+.header-inner {
+    max-width: 1180px;
+    margin: 0 auto;
+}
+
+.student-info h1 {
+    font-size: 25px;
+    margin-bottom: 5px;
+}
+
+.student-info p {
+    font-size: 15px;
+    color: #d7e0ea;
+}
+
+.main-menu {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-top: 16px;
+}
+
+.main-menu a,
+.product-menu a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: 0.2s;
+}
+
+.main-menu a {
+    min-width: 185px;
+    padding: 10px 16px;
+    background: rgba(255, 255, 255, 0.12);
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.22);
+    font-weight: 700;
+}
+
+.main-menu a:hover {
+    background: rgba(255, 255, 255, 0.22);
+}
+
+.main-menu a.selected,
+.product-menu a.selected {
+    background: #ffc857;
+    color: #17202a;
+    border-color: #ffc857;
+    font-weight: 700;
+}
+
+main {
+    max-width: 1180px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 190px minmax(0, 1fr);
+    gap: 24px;
+    padding: 30px 24px;
+}
+
+.product-menu {
+    align-self: start;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 18px;
+    background: #ffffff;
+    border: 1px solid #d8dee8;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+}
+
+.side-title {
+    margin-bottom: 4px;
+    font-size: 16px;
+    font-weight: 700;
+    color: #243447;
+}
+
+.product-menu a {
+    width: 100%;
+    padding: 9px 10px;
+    background: #f3f6fa;
+    color: #243447;
+    border: 1px solid #d8dee8;
+}
+
+.product-menu a:hover {
+    background: #e6edf6;
+}
+
+.content-card {
+    min-width: 0;
+    background: #ffffff;
+    border: 1px solid #d8dee8;
+    border-radius: 12px;
+    padding: 24px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+}
+
+.content-card h2 {
+    margin-bottom: 8px;
+    font-size: 26px;
+    color: #243447;
+}
+
+.description {
+    margin-bottom: 20px;
+    color: #5b6775;
+    line-height: 1.55;
+}
+
+/* Табличная верстка: 2 ряда по 4 колонки */
+.multiplication-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 10px;
+    table-layout: fixed;
+}
+
+.full-table td {
+    width: 25%;
+}
+
+.multiplication-table td,
+.div-column {
+    vertical-align: top;
+    background: #f9fbfd;
+    border: 1px solid #d8dee8;
+    border-radius: 10px;
+    padding: 12px;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.8);
+}
+
+/* Блочная верстка: 4 колонки, 2 ряда */
+.multiplication-div {
+    display: grid;
+    gap: 10px;
+}
+
+.full-div {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.single-table,
+.single-div {
+    max-width: 430px;
+    margin: 0 auto;
+}
+
+.single-table td,
+.single-div .div-column {
+    padding: 22px;
+}
+
+.column-title {
+    margin-bottom: 10px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #d8dee8;
+    color: #243447;
+    font-weight: 700;
+    text-align: center;
+}
+
+.example-line {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    margin: 7px 0;
+    font-size: 16px;
+    white-space: nowrap;
+}
+
+.single-table .example-line,
+.single-div .example-line {
+    font-size: 25px;
+    margin: 12px 0;
+}
+
+.number-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 24px;
+    padding: 2px 4px;
+    color: #1558a8;
+    border-radius: 5px;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.number-link:hover {
+    background: #dfeeff;
+    color: #0f427e;
+}
+
+.sign {
+    color: #6b7684;
+}
+
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background: #243447;
+    color: #ffffff;
+    padding: 13px 20px;
+    text-align: center;
+    z-index: 1000;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.16);
+    font-size: 14px;
+    line-height: 1.45;
+}
+
+footer span {
+    color: #ffc857;
+    font-weight: 700;
+}
+
+@media (max-width: 760px) {
+    header {
+        padding: 16px;
+    }
+
+    main {
+        grid-template-columns: 1fr;
+        padding: 20px 14px 92px;
+    }
+
+    .product-menu {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+    }
+
+    .side-title {
+        grid-column: 1 / -1;
+    }
+
+    .student-info h1 {
+        font-size: 21px;
+    }
+
+    .main-menu a {
+        width: 100%;
+    }
+}
